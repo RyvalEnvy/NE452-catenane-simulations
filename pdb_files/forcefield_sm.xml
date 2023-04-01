@@ -1,0 +1,134 @@
+<ForceField>
+	<AtomTypes>
+		<Type name="0" class="C" element="C" mass="12.011"/>
+		<Type name="1" class="H" element="H" mass="1.008"/>
+	</AtomTypes>
+	<Residues>
+		<Residue name="SM">
+			<Atom name = "C201" type = "0"/>
+			<Atom name = "C202" type = "0"/>
+			<Atom name = "C203" type = "0"/>
+			<Atom name = "C204" type = "0"/>
+			<Atom name = "C205" type = "0"/>
+			<Atom name = "C206" type = "0"/>
+			<Atom name = "C207" type = "0"/>
+			<Atom name = "C208" type = "0"/>
+			<Atom name = "C209" type = "0"/>
+			<Atom name = "C210" type = "0"/>
+			<Atom name = "C211" type = "0"/>
+			<Atom name = "C212" type = "0"/>
+			<Atom name = "C213" type = "0"/>
+			<Atom name = "C214" type = "0"/>
+			<Atom name = "C215" type = "0"/>
+			<Atom name = "C216" type = "0"/>
+			<Atom name = "C217" type = "0"/>
+			<Atom name = "C218" type = "0"/>
+			<Atom name = "C219" type = "0"/>
+			<Atom name = "C220" type = "0"/>
+			<Atom name = "H221" type = "1"/>
+			<Atom name = "H222" type = "1"/>
+			<Atom name = "H223" type = "1"/>
+			<Atom name = "H224" type = "1"/>
+			<Atom name = "H225" type = "1"/>
+			<Atom name = "H226" type = "1"/>
+			<Atom name = "H227" type = "1"/>
+			<Atom name = "H228" type = "1"/>
+			<Atom name = "H229" type = "1"/>
+			<Atom name = "H230" type = "1"/>
+			<Atom name = "H231" type = "1"/>
+			<Atom name = "H232" type = "1"/>
+			<Atom name = "H233" type = "1"/>
+			<Atom name = "H234" type = "1"/>
+			<Atom name = "H235" type = "1"/>
+			<Atom name = "H236" type = "1"/>
+			<Atom name = "H237" type = "1"/>
+			<Atom name = "H238" type = "1"/>
+			<Atom name = "H239" type = "1"/>
+			<Atom name = "H240" type = "1"/>
+			<Atom name = "H241" type = "1"/>
+			<Atom name = "H242" type = "1"/>
+			<Atom name = "H243" type = "1"/>
+			<Atom name = "H244" type = "1"/>
+			<Atom name = "H245" type = "1"/>
+			<Atom name = "H246" type = "1"/>
+			<Atom name = "H247" type = "1"/>
+			<Atom name = "H248" type = "1"/>
+			<Atom name = "H249" type = "1"/>
+			<Atom name = "H250" type = "1"/>
+			<Atom name = "H251" type = "1"/>
+			<Atom name = "H252" type = "1"/>
+			<Atom name = "H253" type = "1"/>
+			<Atom name = "H254" type = "1"/>
+			<Atom name = "H255" type = "1"/>
+			<Atom name = "H256" type = "1"/>
+			<Atom name = "H257" type = "1"/>
+			<Atom name = "H258" type = "1"/>
+			<Atom name = "H259" type = "1"/>
+			<Atom name = "H260" type = "1"/>
+			<Bond atomName1 = "C201" atomName2 = "C202"/>
+			<Bond atomName1 = "C202" atomName2 = "C203"/>
+			<Bond atomName1 = "C203" atomName2 = "C204"/>
+			<Bond atomName1 = "C204" atomName2 = "C205"/>
+			<Bond atomName1 = "C205" atomName2 = "C206"/>
+			<Bond atomName1 = "C206" atomName2 = "C207"/>
+			<Bond atomName1 = "C207" atomName2 = "C208"/>
+			<Bond atomName1 = "C208" atomName2 = "C209"/>
+			<Bond atomName1 = "C209" atomName2 = "C210"/>
+			<Bond atomName1 = "C210" atomName2 = "C211"/>
+			<Bond atomName1 = "C211" atomName2 = "C212"/>
+			<Bond atomName1 = "C212" atomName2 = "C213"/>
+			<Bond atomName1 = "C213" atomName2 = "C214"/>
+			<Bond atomName1 = "C214" atomName2 = "C215"/>
+			<Bond atomName1 = "C215" atomName2 = "C216"/>
+			<Bond atomName1 = "C216" atomName2 = "C217"/>
+			<Bond atomName1 = "C217" atomName2 = "C218"/>
+			<Bond atomName1 = "C218" atomName2 = "C219"/>
+			<Bond atomName1 = "C219" atomName2 = "C220"/>
+			<Bond atomName1 = "C220" atomName2 = "C201"/>
+			<Bond atomName1 = "C201" atomName2 = "H221"/>
+			<Bond atomName1 = "C202" atomName2 = "H222"/>
+			<Bond atomName1 = "C203" atomName2 = "H223"/>
+			<Bond atomName1 = "C204" atomName2 = "H224"/>
+			<Bond atomName1 = "C205" atomName2 = "H225"/>
+			<Bond atomName1 = "C206" atomName2 = "H226"/>
+			<Bond atomName1 = "C207" atomName2 = "H227"/>
+			<Bond atomName1 = "C208" atomName2 = "H228"/>
+			<Bond atomName1 = "C209" atomName2 = "H229"/>
+			<Bond atomName1 = "C210" atomName2 = "H230"/>
+			<Bond atomName1 = "C211" atomName2 = "H231"/>
+			<Bond atomName1 = "C212" atomName2 = "H232"/>
+			<Bond atomName1 = "C213" atomName2 = "H233"/>
+			<Bond atomName1 = "C214" atomName2 = "H234"/>
+			<Bond atomName1 = "C215" atomName2 = "H235"/>
+			<Bond atomName1 = "C216" atomName2 = "H236"/>
+			<Bond atomName1 = "C217" atomName2 = "H237"/>
+			<Bond atomName1 = "C218" atomName2 = "H238"/>
+			<Bond atomName1 = "C219" atomName2 = "H239"/>
+			<Bond atomName1 = "C220" atomName2 = "H240"/>
+			<Bond atomName1 = "C201" atomName2 = "H241"/>
+			<Bond atomName1 = "C202" atomName2 = "H242"/>
+			<Bond atomName1 = "C203" atomName2 = "H243"/>
+			<Bond atomName1 = "C204" atomName2 = "H244"/>
+			<Bond atomName1 = "C205" atomName2 = "H245"/>
+			<Bond atomName1 = "C206" atomName2 = "H246"/>
+			<Bond atomName1 = "C207" atomName2 = "H247"/>
+			<Bond atomName1 = "C208" atomName2 = "H248"/>
+			<Bond atomName1 = "C209" atomName2 = "H249"/>
+			<Bond atomName1 = "C210" atomName2 = "H250"/>
+			<Bond atomName1 = "C211" atomName2 = "H251"/>
+			<Bond atomName1 = "C212" atomName2 = "H252"/>
+			<Bond atomName1 = "C213" atomName2 = "H253"/>
+			<Bond atomName1 = "C214" atomName2 = "H254"/>
+			<Bond atomName1 = "C215" atomName2 = "H255"/>
+			<Bond atomName1 = "C216" atomName2 = "H256"/>
+			<Bond atomName1 = "C217" atomName2 = "H257"/>
+			<Bond atomName1 = "C218" atomName2 = "H258"/>
+			<Bond atomName1 = "C219" atomName2 = "H259"/>
+			<Bond atomName1 = "C220" atomName2 = "H260"/>
+		</Residue>
+	</Residues>
+	<HarmonicBondForce>
+		<Bond class1="C" class2="C" length="0.1525" k="259408.0"/>
+		<Bond class1="C" class2="H" length="0.1090" k="179408.0"/>
+	</HarmonicBondForce>
+</ForceField>
