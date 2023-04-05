@@ -1,17 +1,18 @@
 <ForceField>
 	<AtomTypes>
 		<Type name="0" class="C" element="C" mass="12.011"/>
+		<Type name="0" class="C" element="O" mass="16.00"/>
 	</AtomTypes>
 	<Residues>
 		<Residue name="SM">
 			<Atom name = "C1" type = "0"/>
 			<Atom name = "C2" type = "0"/>
 			<Atom name = "C3" type = "0"/>
-			<Atom name = "C4" type = "0"/>
-			<Atom name = "C5" type = "0"/>
-			<Atom name = "C6" type = "0"/>
-			<Atom name = "C7" type = "0"/>
-			<Atom name = "C8" type = "0"/>
+			<Atom name = "O4" type = "0"/>
+			<Atom name = "O5" type = "0"/>
+			<Atom name = "O6" type = "0"/>
+			<Atom name = "O7" type = "0"/>
+			<Atom name = "O8" type = "0"/>
 			<Atom name = "C9" type = "0"/>
 			<Atom name = "C10" type = "0"/>
 			<Atom name = "C11" type = "0"/>
@@ -26,12 +27,12 @@
 			<Atom name = "C20" type = "0"/>
 			<Bond atomName1 = "C1" atomName2 = "C2"/>
 			<Bond atomName1 = "C2" atomName2 = "C3"/>
-			<Bond atomName1 = "C3" atomName2 = "C4"/>
-			<Bond atomName1 = "C4" atomName2 = "C5"/>
-			<Bond atomName1 = "C5" atomName2 = "C6"/>
-			<Bond atomName1 = "C6" atomName2 = "C7"/>
-			<Bond atomName1 = "C7" atomName2 = "C8"/>
-			<Bond atomName1 = "C8" atomName2 = "C9"/>
+			<Bond atomName1 = "C3" atomName2 = "O4"/>
+			<Bond atomName1 = "O4" atomName2 = "O5"/>
+			<Bond atomName1 = "O5" atomName2 = "O6"/>
+			<Bond atomName1 = "O6" atomName2 = "O7"/>
+			<Bond atomName1 = "O7" atomName2 = "O8"/>
+			<Bond atomName1 = "O8" atomName2 = "C9"/>
 			<Bond atomName1 = "C9" atomName2 = "C10"/>
 			<Bond atomName1 = "C10" atomName2 = "C11"/>
 			<Bond atomName1 = "C11" atomName2 = "C12"/>
@@ -47,9 +48,9 @@
 		</Residue>
 		<Residue name="LG">
 			<Atom name = "C21" type = "0"/>
-			<Atom name = "C22" type = "0"/>
-			<Atom name = "C23" type = "0"/>
-			<Atom name = "C24" type = "0"/>
+			<Atom name = "O22" type = "0"/>
+			<Atom name = "O23" type = "0"/>
+			<Atom name = "O24" type = "0"/>
 			<Atom name = "C25" type = "0"/>
 			<Atom name = "C26" type = "0"/>
 			<Atom name = "C27" type = "0"/>
@@ -116,10 +117,10 @@
 			<Atom name = "C88" type = "0"/>
 			<Atom name = "C89" type = "0"/>
 			<Atom name = "C90" type = "0"/>
-			<Atom name = "C91" type = "0"/>
-			<Atom name = "C92" type = "0"/>
-			<Atom name = "C93" type = "0"/>
-			<Atom name = "C94" type = "0"/>
+			<Atom name = "O91" type = "0"/>
+			<Atom name = "O92" type = "0"/>
+			<Atom name = "O93" type = "0"/>
+			<Atom name = "O94" type = "0"/>
 			<Atom name = "C95" type = "0"/>
 			<Atom name = "C96" type = "0"/>
 			<Atom name = "C97" type = "0"/>
@@ -176,12 +177,12 @@
 			<Atom name = "C148" type = "0"/>
 			<Atom name = "C149" type = "0"/>
 			<Atom name = "C150" type = "0"/>
-			<Atom name = "C151" type = "0"/>
-			<Atom name = "C152" type = "0"/>
-			<Atom name = "C153" type = "0"/>
-			<Atom name = "C154" type = "0"/>
-			<Atom name = "C155" type = "0"/>
-			<Atom name = "C156" type = "0"/>
+			<Atom name = "O151" type = "0"/>
+			<Atom name = "O152" type = "0"/>
+			<Atom name = "O153" type = "0"/>
+			<Atom name = "O154" type = "0"/>
+			<Atom name = "O155" type = "0"/>
+			<Atom name = "O156" type = "0"/>
 			<Atom name = "C157" type = "0"/>
 			<Atom name = "C158" type = "0"/>
 			<Atom name = "C159" type = "0"/>
@@ -246,10 +247,10 @@
 			<Atom name = "C218" type = "0"/>
 			<Atom name = "C219" type = "0"/>
 			<Atom name = "C220" type = "0"/>
-			<Bond atomName1 = "C21" atomName2 = "C22"/>
-			<Bond atomName1 = "C22" atomName2 = "C23"/>
-			<Bond atomName1 = "C23" atomName2 = "C24"/>
-			<Bond atomName1 = "C24" atomName2 = "C25"/>
+			<Bond atomName1 = "C21" atomName2 = "O22"/>
+			<Bond atomName1 = "O22" atomName2 = "O23"/>
+			<Bond atomName1 = "O23" atomName2 = "O24"/>
+			<Bond atomName1 = "O24" atomName2 = "C25"/>
 			<Bond atomName1 = "C25" atomName2 = "C26"/>
 			<Bond atomName1 = "C26" atomName2 = "C27"/>
 			<Bond atomName1 = "C27" atomName2 = "C28"/>
@@ -315,11 +316,11 @@
 			<Bond atomName1 = "C87" atomName2 = "C88"/>
 			<Bond atomName1 = "C88" atomName2 = "C89"/>
 			<Bond atomName1 = "C89" atomName2 = "C90"/>
-			<Bond atomName1 = "C90" atomName2 = "C91"/>
-			<Bond atomName1 = "C91" atomName2 = "C92"/>
-			<Bond atomName1 = "C92" atomName2 = "C93"/>
-			<Bond atomName1 = "C93" atomName2 = "C94"/>
-			<Bond atomName1 = "C94" atomName2 = "C95"/>
+			<Bond atomName1 = "C90" atomName2 = "O91"/>
+			<Bond atomName1 = "O91" atomName2 = "O92"/>
+			<Bond atomName1 = "O92" atomName2 = "O93"/>
+			<Bond atomName1 = "O93" atomName2 = "O94"/>
+			<Bond atomName1 = "O94" atomName2 = "C95"/>
 			<Bond atomName1 = "C95" atomName2 = "C96"/>
 			<Bond atomName1 = "C96" atomName2 = "C97"/>
 			<Bond atomName1 = "C97" atomName2 = "C98"/>
@@ -375,13 +376,13 @@
 			<Bond atomName1 = "C147" atomName2 = "C148"/>
 			<Bond atomName1 = "C148" atomName2 = "C149"/>
 			<Bond atomName1 = "C149" atomName2 = "C150"/>
-			<Bond atomName1 = "C150" atomName2 = "C151"/>
-			<Bond atomName1 = "C151" atomName2 = "C152"/>
-			<Bond atomName1 = "C152" atomName2 = "C153"/>
-			<Bond atomName1 = "C153" atomName2 = "C154"/>
-			<Bond atomName1 = "C154" atomName2 = "C155"/>
-			<Bond atomName1 = "C155" atomName2 = "C156"/>
-			<Bond atomName1 = "C156" atomName2 = "C157"/>
+			<Bond atomName1 = "C150" atomName2 = "O151"/>
+			<Bond atomName1 = "O151" atomName2 = "O152"/>
+			<Bond atomName1 = "O152" atomName2 = "O153"/>
+			<Bond atomName1 = "O153" atomName2 = "O154"/>
+			<Bond atomName1 = "O154" atomName2 = "O155"/>
+			<Bond atomName1 = "O155" atomName2 = "O156"/>
+			<Bond atomName1 = "O156" atomName2 = "C157"/>
 			<Bond atomName1 = "C157" atomName2 = "C158"/>
 			<Bond atomName1 = "C158" atomName2 = "C159"/>
 			<Bond atomName1 = "C159" atomName2 = "C160"/>
@@ -445,7 +446,7 @@
 			<Bond atomName1 = "C217" atomName2 = "C218"/>
 			<Bond atomName1 = "C218" atomName2 = "C219"/>
 			<Bond atomName1 = "C219" atomName2 = "C220"/>
-			<Bond atomName1 = "C220" atomName2 = "C21"/>
+			<Bond atomName1 = "C220" atomName2 = "C41"/>
 		</Residue>
 	</Residues>
 	<HarmonicBondForce>
