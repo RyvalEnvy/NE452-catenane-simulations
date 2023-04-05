@@ -452,4 +452,10 @@
 	<HarmonicBondForce>
 		<Bond class1="C" class2="C" length="0.1525" k="259408.0"/>
 	</HarmonicBondForce>
+	<HarmonicAngleForce>
+		<Angle class1="C" class2="C" class3="C" angle="1.904" k="20920"/>
+	</HarmonicAngleForce>
+	<NonbondedForce coulomb14scale="0.833333" lj14scale="0.5">
+		<Atom type="0" charge="0" sigma="0.36239" epsilon="0.83011"/>
+	</NonbondedForce>
 </ForceField>
