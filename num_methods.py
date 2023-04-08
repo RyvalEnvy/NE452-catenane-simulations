@@ -95,11 +95,75 @@ def calculate_angular_displacement():
         
     return angular_displacement
     
+def autocorrelation(plot = True, upTo = None):  
+    """ find the autocorrelation of some value found in the simulation. 
+        in the simulations done in class, this is a vector of positions."""
+
+    # load the trajectory
+    feature = reload("animate_bad.xyz")
+    nParticles = feature.shape[-1]
+    nSteps = feature.shape[0]
+
+    acorr = np.ones(nSteps)
+
+    # find the mean and variance of the features for each individual particle 
+    # and axis over the entire trajectory
+    qMean = np.mean(feature, axis = 0) # output dims: (xyz, nParticles)
+    qVar = np.var(feature, axis = 0) # output dims: (xyz, nParticles)
+
+    # find correlation fn
+    for n in range(nSteps):
+        # set up array to store correlations of individual molecules in 3 
+        # dimensions
+        corrCount = np.zeros((3, nParticles))
+
+        prefactor = 1/(3 * nParticles * (nSteps - n + 1))   # div by dimensions,
+                                                            # num particles and
+                                                            # num steps
+
+        # iterate over each step n steps from the current bead
+        for i in range(nSteps-n):
+            # current position and position n steps from current
+            q = feature[i, :, :] # output dims: (xyz, nParticles)
+            qPlus = feature[i + n, :, :]
+
+            corrCount[:, :] += (q-qMean)*(qPlus-qMean)
+
+        # correlation per molecule and dimension:
+        indivCorr = corrCount/qVar
+
+        # sum the correlation across all dimensions and beads
+        collective = np.sum(indivCorr)
+        
+        # acorr[n] = prefactor*collective
+        acorr[n] = prefactor*indivCorr[0, 0]*3*nParticles
+
+    # acorr /= qVar
+
+    # plot correlation
+    if plot:
+        # check if the range has been shortened:
+        if upTo != None:
+            nSteps = upTo
+
+        n = np.arange(1, nSteps+1) #np.arange(1, 100)
+        plt.plot(n, acorr[0:nSteps])#[0:99])
+        plt.ylabel("Correlation")
+        plt.xlabel("Step number")
+        plt.title("Autocorrelation of q")
+
+        plt.show()
+        plt.close()
+
+    return acorr
+
 if __name__ == "__main__":
-    angs = calculate_angular_displacement()
-    iters = np.arange(angs.shape[0])
-    print("shape of angles:", angs.shape)
-    print("shape of iters:", iters.shape)
-    plt.plot(iters, angs)
-    plt.show()
-    plt.close()
+    # angs = calculate_angular_displacement()
+    # iters = np.arange(angs.shape[0])
+    # print("shape of angles:", angs.shape)
+    # print("shape of iters:", iters.shape)
+    # plt.plot(iters, angs)
+    # plt.show()
+    # plt.close()
+
+    autocorrelation(upTo = 500)
