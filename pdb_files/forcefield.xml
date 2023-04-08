@@ -442,8 +442,10 @@
 		<Bond class1="C_S" class2 = "C_S" />
 		<Bond class1="C_L" class2 = "C_L" />
 	</CustomBondForce>
-	<CustomNonbondedForce energy="4*eps*((sigma/r)^12+(sigma/r)^6+1/4)" bondCutoff="2">
-		<GlobalParameter name="eps" defaultValue="1"/>
-		<GlobalParameter name="sigma" defaultValue="1"/>
+	<CustomNonbondedForce energy="4*epsilon1*epsilon2*((sigma1*sigma2/r)^12+(sigma1*sigma2/r)^6+1/4)" bondCutoff="2">
+		<PerParticleParameter name="sigma"/>
+		<PerParticleParameter name="epsilon"/>
+		<Atom type="0" sigma="1" epsilon="1"/>
+		<Atom type="1" sigma="1" epsilon="1"/>
 	</CustomNonbondedForce>
 </ForceField>
