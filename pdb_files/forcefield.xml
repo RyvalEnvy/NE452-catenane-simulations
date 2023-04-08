@@ -437,12 +437,12 @@
 		<Angle class1="C_S" class2="C_S" class3="C_S" angle="2.51" k="100"/>
 	</HarmonicAngleForce>
 	<CustomBondForce energy="(-(K*(R_o)^2)/2)*log(1- (r/R_o)^2)">
-		<GlobalParameter name = "K" defaultValue = 30>
-		<GlobalParameter name = "R_o" defaultValue = 1.5>
+		<GlobalParameter name = "K" defaultValue = "30"/>
+		<GlobalParameter name = "R_o" defaultValue = "1.5"/>
 		<Bond class1="C_S" class2 = "C_S" />
 		<Bond class1="C_L" class2 = "C_L" />
 	</CustomBondForce>
-	<CustomNonbondedForce energy="4*eps*((sigma/r)^12+(sigma/r)^6+1/4)" bondCutoff="1.12">
+	<CustomNonbondedForce energy="4*eps*((sigma/r)^12+(sigma/r)^6+1/4)" bondCutoff="2">
 		<GlobalParameter name="eps" defaultValue="1"/>
 		<GlobalParameter name="sigma" defaultValue="1"/>
 	</CustomNonbondedForce>
