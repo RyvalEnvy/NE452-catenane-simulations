@@ -1,8 +1,8 @@
 <ForceField>
 	<AtomTypes>
-		<Type name="0" class="C" element="C" mass="12.011"/>
-		<Type name="1" class="O" element="O" mass="16.00"/>
-		<Type name="2" class="H" element="H" mass="1.01"/>
+		<Type name="0" class="C_S" element="C" mass="1.00"/>
+		<Type name="1" class="C_L" element="C" mass="1.00"/>
+		<Type name="2" class="O" element="O" mass="16.00"/>
 	</AtomTypes>
 	<Residues>
 		<Residue name="SM">
@@ -16,12 +16,6 @@
 			<Atom name = "C8" type = "0"/>
 			<Atom name = "C9" type = "0"/>
 			<Atom name = "C10" type = "0"/>
-			<Atom name = "O11" type = "1"/>
-			<Atom name = "H14" type = "2"/>
-			<Atom name = "O12" type = "1"/>
-			<Atom name = "H15" type = "2"/>
-			<Atom name = "O13" type = "1"/>
-			<Atom name = "H16" type = "2"/>
 			<Bond atomName1 = "C1" atomName2 = "C2"/>
 			<Bond atomName1 = "C2" atomName2 = "C3"/>
 			<Bond atomName1 = "C3" atomName2 = "C4"/>
@@ -32,220 +26,214 @@
 			<Bond atomName1 = "C8" atomName2 = "C9"/>
 			<Bond atomName1 = "C9" atomName2 = "C10"/>
 			<Bond atomName1 = "C10" atomName2 = "C1"/>
-			<Bond atomName1 = "C2" atomName2 = "O11"/>
-			<Bond atomName1 = "O11" atomName2 = "H14"/>
-			<Bond atomName1 = "C3" atomName2 = "O12"/>
-			<Bond atomName1 = "O12" atomName2 = "H15"/>
-			<Bond atomName1 = "C4" atomName2 = "O13"/>
-			<Bond atomName1 = "O13" atomName2 = "H16"/>
 		</Residue>
 		<Residue name="LG">
-			<Atom name = "C17" type = "0"/>
-			<Atom name = "C18" type = "0"/>
-			<Atom name = "C19" type = "0"/>
-			<Atom name = "C20" type = "0"/>
-			<Atom name = "C21" type = "0"/>
-			<Atom name = "C22" type = "0"/>
-			<Atom name = "C23" type = "0"/>
-			<Atom name = "C24" type = "0"/>
-			<Atom name = "C25" type = "0"/>
-			<Atom name = "C26" type = "0"/>
-			<Atom name = "C27" type = "0"/>
-			<Atom name = "C28" type = "0"/>
-			<Atom name = "C29" type = "0"/>
-			<Atom name = "C30" type = "0"/>
-			<Atom name = "C31" type = "0"/>
-			<Atom name = "C32" type = "0"/>
-			<Atom name = "C33" type = "0"/>
-			<Atom name = "C34" type = "0"/>
-			<Atom name = "C35" type = "0"/>
-			<Atom name = "C36" type = "0"/>
-			<Atom name = "C37" type = "0"/>
-			<Atom name = "C38" type = "0"/>
-			<Atom name = "C39" type = "0"/>
-			<Atom name = "C40" type = "0"/>
-			<Atom name = "C41" type = "0"/>
-			<Atom name = "C42" type = "0"/>
-			<Atom name = "C43" type = "0"/>
-			<Atom name = "C44" type = "0"/>
-			<Atom name = "C45" type = "0"/>
-			<Atom name = "C46" type = "0"/>
-			<Atom name = "C47" type = "0"/>
-			<Atom name = "C48" type = "0"/>
-			<Atom name = "C49" type = "0"/>
-			<Atom name = "C50" type = "0"/>
-			<Atom name = "C51" type = "0"/>
-			<Atom name = "C52" type = "0"/>
-			<Atom name = "C53" type = "0"/>
-			<Atom name = "C54" type = "0"/>
-			<Atom name = "C55" type = "0"/>
-			<Atom name = "C56" type = "0"/>
-			<Atom name = "C57" type = "0"/>
-			<Atom name = "C58" type = "0"/>
-			<Atom name = "C59" type = "0"/>
-			<Atom name = "C60" type = "0"/>
-			<Atom name = "C61" type = "0"/>
-			<Atom name = "C62" type = "0"/>
-			<Atom name = "C63" type = "0"/>
-			<Atom name = "C64" type = "0"/>
-			<Atom name = "C65" type = "0"/>
-			<Atom name = "C66" type = "0"/>
-			<Atom name = "C67" type = "0"/>
-			<Atom name = "C68" type = "0"/>
-			<Atom name = "C69" type = "0"/>
-			<Atom name = "C70" type = "0"/>
-			<Atom name = "C71" type = "0"/>
-			<Atom name = "C72" type = "0"/>
-			<Atom name = "C73" type = "0"/>
-			<Atom name = "C74" type = "0"/>
-			<Atom name = "C75" type = "0"/>
-			<Atom name = "C76" type = "0"/>
-			<Atom name = "C77" type = "0"/>
-			<Atom name = "C78" type = "0"/>
-			<Atom name = "C79" type = "0"/>
-			<Atom name = "C80" type = "0"/>
-			<Atom name = "C81" type = "0"/>
-			<Atom name = "C82" type = "0"/>
-			<Atom name = "C83" type = "0"/>
-			<Atom name = "C84" type = "0"/>
-			<Atom name = "C85" type = "0"/>
-			<Atom name = "C86" type = "0"/>
-			<Atom name = "C87" type = "0"/>
-			<Atom name = "C88" type = "0"/>
-			<Atom name = "C89" type = "0"/>
-			<Atom name = "C90" type = "0"/>
-			<Atom name = "C91" type = "0"/>
-			<Atom name = "C92" type = "0"/>
-			<Atom name = "C93" type = "0"/>
-			<Atom name = "C94" type = "0"/>
-			<Atom name = "C95" type = "0"/>
-			<Atom name = "C96" type = "0"/>
-			<Atom name = "C97" type = "0"/>
-			<Atom name = "C98" type = "0"/>
-			<Atom name = "C99" type = "0"/>
-			<Atom name = "C100" type = "0"/>
-			<Atom name = "C101" type = "0"/>
-			<Atom name = "C102" type = "0"/>
-			<Atom name = "C103" type = "0"/>
-			<Atom name = "C104" type = "0"/>
-			<Atom name = "C105" type = "0"/>
-			<Atom name = "C106" type = "0"/>
-			<Atom name = "C107" type = "0"/>
-			<Atom name = "C108" type = "0"/>
-			<Atom name = "C109" type = "0"/>
-			<Atom name = "C110" type = "0"/>
-			<Atom name = "C111" type = "0"/>
-			<Atom name = "C112" type = "0"/>
-			<Atom name = "C113" type = "0"/>
-			<Atom name = "C114" type = "0"/>
-			<Atom name = "C115" type = "0"/>
-			<Atom name = "C116" type = "0"/>
-			<Atom name = "C117" type = "0"/>
-			<Atom name = "C118" type = "0"/>
-			<Atom name = "C119" type = "0"/>
-			<Atom name = "C120" type = "0"/>
-			<Atom name = "C121" type = "0"/>
-			<Atom name = "C122" type = "0"/>
-			<Atom name = "C123" type = "0"/>
-			<Atom name = "C124" type = "0"/>
-			<Atom name = "C125" type = "0"/>
-			<Atom name = "C126" type = "0"/>
-			<Atom name = "C127" type = "0"/>
-			<Atom name = "C128" type = "0"/>
-			<Atom name = "C129" type = "0"/>
-			<Atom name = "C130" type = "0"/>
-			<Atom name = "C131" type = "0"/>
-			<Atom name = "C132" type = "0"/>
-			<Atom name = "C133" type = "0"/>
-			<Atom name = "C134" type = "0"/>
-			<Atom name = "C135" type = "0"/>
-			<Atom name = "C136" type = "0"/>
-			<Atom name = "C137" type = "0"/>
-			<Atom name = "C138" type = "0"/>
-			<Atom name = "C139" type = "0"/>
-			<Atom name = "C140" type = "0"/>
-			<Atom name = "C141" type = "0"/>
-			<Atom name = "C142" type = "0"/>
-			<Atom name = "C143" type = "0"/>
-			<Atom name = "C144" type = "0"/>
-			<Atom name = "C145" type = "0"/>
-			<Atom name = "C146" type = "0"/>
-			<Atom name = "C147" type = "0"/>
-			<Atom name = "C148" type = "0"/>
-			<Atom name = "C149" type = "0"/>
-			<Atom name = "C150" type = "0"/>
-			<Atom name = "C151" type = "0"/>
-			<Atom name = "C152" type = "0"/>
-			<Atom name = "C153" type = "0"/>
-			<Atom name = "C154" type = "0"/>
-			<Atom name = "C155" type = "0"/>
-			<Atom name = "C156" type = "0"/>
-			<Atom name = "C157" type = "0"/>
-			<Atom name = "C158" type = "0"/>
-			<Atom name = "C159" type = "0"/>
-			<Atom name = "C160" type = "0"/>
-			<Atom name = "C161" type = "0"/>
-			<Atom name = "C162" type = "0"/>
-			<Atom name = "C163" type = "0"/>
-			<Atom name = "C164" type = "0"/>
-			<Atom name = "C165" type = "0"/>
-			<Atom name = "C166" type = "0"/>
-			<Atom name = "C167" type = "0"/>
-			<Atom name = "C168" type = "0"/>
-			<Atom name = "C169" type = "0"/>
-			<Atom name = "C170" type = "0"/>
-			<Atom name = "C171" type = "0"/>
-			<Atom name = "C172" type = "0"/>
-			<Atom name = "C173" type = "0"/>
-			<Atom name = "C174" type = "0"/>
-			<Atom name = "C175" type = "0"/>
-			<Atom name = "C176" type = "0"/>
-			<Atom name = "C177" type = "0"/>
-			<Atom name = "C178" type = "0"/>
-			<Atom name = "C179" type = "0"/>
-			<Atom name = "C180" type = "0"/>
-			<Atom name = "C181" type = "0"/>
-			<Atom name = "C182" type = "0"/>
-			<Atom name = "C183" type = "0"/>
-			<Atom name = "C184" type = "0"/>
-			<Atom name = "C185" type = "0"/>
-			<Atom name = "C186" type = "0"/>
-			<Atom name = "C187" type = "0"/>
-			<Atom name = "C188" type = "0"/>
-			<Atom name = "C189" type = "0"/>
-			<Atom name = "C190" type = "0"/>
-			<Atom name = "C191" type = "0"/>
-			<Atom name = "C192" type = "0"/>
-			<Atom name = "C193" type = "0"/>
-			<Atom name = "C194" type = "0"/>
-			<Atom name = "C195" type = "0"/>
-			<Atom name = "C196" type = "0"/>
-			<Atom name = "C197" type = "0"/>
-			<Atom name = "C198" type = "0"/>
-			<Atom name = "C199" type = "0"/>
-			<Atom name = "C200" type = "0"/>
-			<Atom name = "C201" type = "0"/>
-			<Atom name = "C202" type = "0"/>
-			<Atom name = "C203" type = "0"/>
-			<Atom name = "C204" type = "0"/>
-			<Atom name = "C205" type = "0"/>
-			<Atom name = "C206" type = "0"/>
-			<Atom name = "C207" type = "0"/>
-			<Atom name = "C208" type = "0"/>
-			<Atom name = "C209" type = "0"/>
-			<Atom name = "C210" type = "0"/>
-			<Atom name = "C211" type = "0"/>
-			<Atom name = "C212" type = "0"/>
-			<Atom name = "C213" type = "0"/>
-			<Atom name = "C214" type = "0"/>
-			<Atom name = "C215" type = "0"/>
-			<Atom name = "C216" type = "0"/>
-			<Atom name = "O217" type = "1"/>
-			<Atom name = "H220" type = "2"/>
-			<Atom name = "O218" type = "1"/>
-			<Atom name = "H221" type = "2"/>
-			<Atom name = "O219" type = "1"/>
-			<Atom name = "H222" type = "2"/>
+			<Atom name = "C11" type = "1"/>
+			<Atom name = "C12" type = "1"/>
+			<Atom name = "C13" type = "1"/>
+			<Atom name = "C14" type = "1"/>
+			<Atom name = "C15" type = "1"/>
+			<Atom name = "C16" type = "1"/>
+			<Atom name = "C17" type = "1"/>
+			<Atom name = "C18" type = "1"/>
+			<Atom name = "C19" type = "1"/>
+			<Atom name = "C20" type = "1"/>
+			<Atom name = "C21" type = "1"/>
+			<Atom name = "C22" type = "1"/>
+			<Atom name = "C23" type = "1"/>
+			<Atom name = "C24" type = "1"/>
+			<Atom name = "C25" type = "1"/>
+			<Atom name = "C26" type = "1"/>
+			<Atom name = "C27" type = "1"/>
+			<Atom name = "C28" type = "1"/>
+			<Atom name = "C29" type = "1"/>
+			<Atom name = "C30" type = "1"/>
+			<Atom name = "C31" type = "1"/>
+			<Atom name = "C32" type = "1"/>
+			<Atom name = "C33" type = "1"/>
+			<Atom name = "C34" type = "1"/>
+			<Atom name = "C35" type = "1"/>
+			<Atom name = "C36" type = "1"/>
+			<Atom name = "C37" type = "1"/>
+			<Atom name = "C38" type = "1"/>
+			<Atom name = "C39" type = "1"/>
+			<Atom name = "C40" type = "1"/>
+			<Atom name = "C41" type = "1"/>
+			<Atom name = "C42" type = "1"/>
+			<Atom name = "C43" type = "1"/>
+			<Atom name = "C44" type = "1"/>
+			<Atom name = "C45" type = "1"/>
+			<Atom name = "C46" type = "1"/>
+			<Atom name = "C47" type = "1"/>
+			<Atom name = "C48" type = "1"/>
+			<Atom name = "C49" type = "1"/>
+			<Atom name = "C50" type = "1"/>
+			<Atom name = "C51" type = "1"/>
+			<Atom name = "C52" type = "1"/>
+			<Atom name = "C53" type = "1"/>
+			<Atom name = "C54" type = "1"/>
+			<Atom name = "C55" type = "1"/>
+			<Atom name = "C56" type = "1"/>
+			<Atom name = "C57" type = "1"/>
+			<Atom name = "C58" type = "1"/>
+			<Atom name = "C59" type = "1"/>
+			<Atom name = "C60" type = "1"/>
+			<Atom name = "C61" type = "1"/>
+			<Atom name = "C62" type = "1"/>
+			<Atom name = "C63" type = "1"/>
+			<Atom name = "C64" type = "1"/>
+			<Atom name = "C65" type = "1"/>
+			<Atom name = "C66" type = "1"/>
+			<Atom name = "C67" type = "1"/>
+			<Atom name = "C68" type = "1"/>
+			<Atom name = "C69" type = "1"/>
+			<Atom name = "C70" type = "1"/>
+			<Atom name = "C71" type = "1"/>
+			<Atom name = "C72" type = "1"/>
+			<Atom name = "C73" type = "1"/>
+			<Atom name = "C74" type = "1"/>
+			<Atom name = "C75" type = "1"/>
+			<Atom name = "C76" type = "1"/>
+			<Atom name = "C77" type = "1"/>
+			<Atom name = "C78" type = "1"/>
+			<Atom name = "C79" type = "1"/>
+			<Atom name = "C80" type = "1"/>
+			<Atom name = "C81" type = "1"/>
+			<Atom name = "C82" type = "1"/>
+			<Atom name = "C83" type = "1"/>
+			<Atom name = "C84" type = "1"/>
+			<Atom name = "C85" type = "1"/>
+			<Atom name = "C86" type = "1"/>
+			<Atom name = "C87" type = "1"/>
+			<Atom name = "C88" type = "1"/>
+			<Atom name = "C89" type = "1"/>
+			<Atom name = "C90" type = "1"/>
+			<Atom name = "C91" type = "1"/>
+			<Atom name = "C92" type = "1"/>
+			<Atom name = "C93" type = "1"/>
+			<Atom name = "C94" type = "1"/>
+			<Atom name = "C95" type = "1"/>
+			<Atom name = "C96" type = "1"/>
+			<Atom name = "C97" type = "1"/>
+			<Atom name = "C98" type = "1"/>
+			<Atom name = "C99" type = "1"/>
+			<Atom name = "C100" type = "1"/>
+			<Atom name = "C101" type = "1"/>
+			<Atom name = "C102" type = "1"/>
+			<Atom name = "C103" type = "1"/>
+			<Atom name = "C104" type = "1"/>
+			<Atom name = "C105" type = "1"/>
+			<Atom name = "C106" type = "1"/>
+			<Atom name = "C107" type = "1"/>
+			<Atom name = "C108" type = "1"/>
+			<Atom name = "C109" type = "1"/>
+			<Atom name = "C110" type = "1"/>
+			<Atom name = "C111" type = "1"/>
+			<Atom name = "C112" type = "1"/>
+			<Atom name = "C113" type = "1"/>
+			<Atom name = "C114" type = "1"/>
+			<Atom name = "C115" type = "1"/>
+			<Atom name = "C116" type = "1"/>
+			<Atom name = "C117" type = "1"/>
+			<Atom name = "C118" type = "1"/>
+			<Atom name = "C119" type = "1"/>
+			<Atom name = "C120" type = "1"/>
+			<Atom name = "C121" type = "1"/>
+			<Atom name = "C122" type = "1"/>
+			<Atom name = "C123" type = "1"/>
+			<Atom name = "C124" type = "1"/>
+			<Atom name = "C125" type = "1"/>
+			<Atom name = "C126" type = "1"/>
+			<Atom name = "C127" type = "1"/>
+			<Atom name = "C128" type = "1"/>
+			<Atom name = "C129" type = "1"/>
+			<Atom name = "C130" type = "1"/>
+			<Atom name = "C131" type = "1"/>
+			<Atom name = "C132" type = "1"/>
+			<Atom name = "C133" type = "1"/>
+			<Atom name = "C134" type = "1"/>
+			<Atom name = "C135" type = "1"/>
+			<Atom name = "C136" type = "1"/>
+			<Atom name = "C137" type = "1"/>
+			<Atom name = "C138" type = "1"/>
+			<Atom name = "C139" type = "1"/>
+			<Atom name = "C140" type = "1"/>
+			<Atom name = "C141" type = "1"/>
+			<Atom name = "C142" type = "1"/>
+			<Atom name = "C143" type = "1"/>
+			<Atom name = "C144" type = "1"/>
+			<Atom name = "C145" type = "1"/>
+			<Atom name = "C146" type = "1"/>
+			<Atom name = "C147" type = "1"/>
+			<Atom name = "C148" type = "1"/>
+			<Atom name = "C149" type = "1"/>
+			<Atom name = "C150" type = "1"/>
+			<Atom name = "C151" type = "1"/>
+			<Atom name = "C152" type = "1"/>
+			<Atom name = "C153" type = "1"/>
+			<Atom name = "C154" type = "1"/>
+			<Atom name = "C155" type = "1"/>
+			<Atom name = "C156" type = "1"/>
+			<Atom name = "C157" type = "1"/>
+			<Atom name = "C158" type = "1"/>
+			<Atom name = "C159" type = "1"/>
+			<Atom name = "C160" type = "1"/>
+			<Atom name = "C161" type = "1"/>
+			<Atom name = "C162" type = "1"/>
+			<Atom name = "C163" type = "1"/>
+			<Atom name = "C164" type = "1"/>
+			<Atom name = "C165" type = "1"/>
+			<Atom name = "C166" type = "1"/>
+			<Atom name = "C167" type = "1"/>
+			<Atom name = "C168" type = "1"/>
+			<Atom name = "C169" type = "1"/>
+			<Atom name = "C170" type = "1"/>
+			<Atom name = "C171" type = "1"/>
+			<Atom name = "C172" type = "1"/>
+			<Atom name = "C173" type = "1"/>
+			<Atom name = "C174" type = "1"/>
+			<Atom name = "C175" type = "1"/>
+			<Atom name = "C176" type = "1"/>
+			<Atom name = "C177" type = "1"/>
+			<Atom name = "C178" type = "1"/>
+			<Atom name = "C179" type = "1"/>
+			<Atom name = "C180" type = "1"/>
+			<Atom name = "C181" type = "1"/>
+			<Atom name = "C182" type = "1"/>
+			<Atom name = "C183" type = "1"/>
+			<Atom name = "C184" type = "1"/>
+			<Atom name = "C185" type = "1"/>
+			<Atom name = "C186" type = "1"/>
+			<Atom name = "C187" type = "1"/>
+			<Atom name = "C188" type = "1"/>
+			<Atom name = "C189" type = "1"/>
+			<Atom name = "C190" type = "1"/>
+			<Atom name = "C191" type = "1"/>
+			<Atom name = "C192" type = "1"/>
+			<Atom name = "C193" type = "1"/>
+			<Atom name = "C194" type = "1"/>
+			<Atom name = "C195" type = "1"/>
+			<Atom name = "C196" type = "1"/>
+			<Atom name = "C197" type = "1"/>
+			<Atom name = "C198" type = "1"/>
+			<Atom name = "C199" type = "1"/>
+			<Atom name = "C200" type = "1"/>
+			<Atom name = "C201" type = "1"/>
+			<Atom name = "C202" type = "1"/>
+			<Atom name = "C203" type = "1"/>
+			<Atom name = "C204" type = "1"/>
+			<Atom name = "C205" type = "1"/>
+			<Atom name = "C206" type = "1"/>
+			<Atom name = "C207" type = "1"/>
+			<Atom name = "C208" type = "1"/>
+			<Atom name = "C209" type = "1"/>
+			<Atom name = "C210" type = "1"/>
+			<Bond atomName1 = "C11" atomName2 = "C12"/>
+			<Bond atomName1 = "C12" atomName2 = "C13"/>
+			<Bond atomName1 = "C13" atomName2 = "C14"/>
+			<Bond atomName1 = "C14" atomName2 = "C15"/>
+			<Bond atomName1 = "C15" atomName2 = "C16"/>
+			<Bond atomName1 = "C16" atomName2 = "C17"/>
 			<Bond atomName1 = "C17" atomName2 = "C18"/>
 			<Bond atomName1 = "C18" atomName2 = "C19"/>
 			<Bond atomName1 = "C19" atomName2 = "C20"/>
@@ -439,28 +427,23 @@
 			<Bond atomName1 = "C207" atomName2 = "C208"/>
 			<Bond atomName1 = "C208" atomName2 = "C209"/>
 			<Bond atomName1 = "C209" atomName2 = "C210"/>
-			<Bond atomName1 = "C210" atomName2 = "C211"/>
-			<Bond atomName1 = "C211" atomName2 = "C212"/>
-			<Bond atomName1 = "C212" atomName2 = "C213"/>
-			<Bond atomName1 = "C213" atomName2 = "C214"/>
-			<Bond atomName1 = "C214" atomName2 = "C215"/>
-			<Bond atomName1 = "C215" atomName2 = "C216"/>
-			<Bond atomName1 = "C216" atomName2 = "C17"/>
-			<Bond atomName1 = "C18" atomName2 = "O217"/>
-			<Bond atomName1 = "O217" atomName2 = "H220"/>
-			<Bond atomName1 = "C19" atomName2 = "O218"/>
-			<Bond atomName1 = "O218" atomName2 = "H221"/>
-			<Bond atomName1 = "C20" atomName2 = "O219"/>
-			<Bond atomName1 = "O219" atomName2 = "H222"/>
+			<Bond atomName1 = "C210" atomName2 = "C11"/>
 		</Residue>
 	</Residues>
-	<HarmonicBondForce>
-		<Bond class1="C" class2="C" length="0.1525" k="259408.0"/>
-	</HarmonicBondForce>
 	<HarmonicAngleForce>
-		<Angle class1="C" class2="C" class3="C" angle="1.904" k="20920"/>
+		<Angle class1="C_L" class2="C_L" class3="C_L" angle="3.11" k="50"/>
 	</HarmonicAngleForce>
-	<NonbondedForce coulomb14scale="0.833333" lj14scale="0.5">
-		<Atom type="0" charge="0" sigma="0.36239" epsilon="0.83011"/>
-	</NonbondedForce>
+	<HarmonicAngleForce>
+		<Angle class1="C_S" class2="C_S" class3="C_S" angle="2.51" k="100"/>
+	</HarmonicAngleForce>
+	<CustomBondForce energy="(-(K*(R_o)^2)/2)*log(1- (r/R_o)^2)">
+		<GlobalParameter name = "K" defaultValue = 30>
+		<GlobalParameter name = "R_o" defaultValue = 1.5>
+		<Bond class1="C_S" class2 = "C_S" />
+		<Bond class1="C_L" class2 = "C_L" />
+	</CustomBondForce>
+	<CustomNonbondedForce energy="4*eps*((sigma/r)^12+(sigma/r)^6+1/4)" bondCutoff="1.12">
+		<GlobalParameter name="eps" defaultValue="1"/>
+		<GlobalParameter name="sigma" defaultValue="1"/>
+	</CustomNonbondedForce>
 </ForceField>

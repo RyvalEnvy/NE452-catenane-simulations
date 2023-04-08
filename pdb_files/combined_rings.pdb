@@ -1,4 +1,4 @@
-HEADER    interlinked with 10 atoms spaced evenly around a circle for the small ring and 200 for the large ring
+HEADER    interlinked with 10 atoms spaced evenly around a circle for the small ring and 200 for the large ring with 3 hydrogen binding spots on each ring
 MODEL     1
 HETATM    1  C1  SM  A   1      -0.159   3.024   0.000  1.00  0.00           C  
 HETATM    2  C2  SM  A   1      -0.159   3.054   0.094  1.00  0.00           C  
@@ -19,7 +19,7 @@ HETATM   16 C16  LG  A   2      -3.144   0.498   0.000  1.00  0.00           C
 HETATM   17 C17  LG  A   2      -3.127   0.596   0.000  1.00  0.00           C  
 HETATM   18 C18  LG  A   2      -3.106   0.694   0.000  1.00  0.00           C  
 HETATM   19 C19  LG  A   2      -3.083   0.792   0.000  1.00  0.00           C  
-HETATM   20 C20  LG  A   2      -3.057   0.888   0.000  1.00  0.00           O  
+HETATM   20 C20  LG  A   2      -3.057   0.888   0.000  1.00  0.00           C  
 HETATM   21 C21  LG  A   2      -3.027   0.984   0.000  1.00  0.00           C  
 HETATM   22 C22  LG  A   2      -2.995   1.078   0.000  1.00  0.00           C  
 HETATM   23 C23  LG  A   2      -2.960   1.172   0.000  1.00  0.00           C  
