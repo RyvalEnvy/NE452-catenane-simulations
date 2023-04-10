@@ -29,8 +29,8 @@ def reload(T = 1, gamma = 1, length = 1, dt = 0.1, skipSteps = 1,
 
     a = np.loadtxt(fname)
     nParticles = a.shape[-1]//3
-    a = a.reshape(totSteps, 3, nParticles)
-    
+    a = a.reshape(totSteps+1, 3, nParticles)
+
     return a
 
 def animate_data(data1, data2, mins, maxs, n_t, name, initials = True, hists = True, curr = True):
@@ -91,14 +91,14 @@ def animate_data(data1, data2, mins, maxs, n_t, name, initials = True, hists = T
    # plotting the animation
    fig = plt.figure()
    ax = plt.axes(projection='3d')
-   line_ani = animation.FuncAnimation(fig, animate_func, interval=100, frames=n_t-1)
+   line_ani = animation.FuncAnimation(fig, animate_func, interval=200, frames=n_t-1)
    
    print ("done")
    plt.show()
    
-   # Saving the Animation
-   writergif = animation.PillowWriter(fps=n_t/6)
-   line_ani.save(name, writer=writergif)
+#    # Saving the Animation
+#    writergif = animation.PillowWriter(fps=n_t/6)
+#    line_ani.save(name, writer=writergif)
    
    return line_ani
 
@@ -109,11 +109,15 @@ if __name__ == "__main__":
     smSize = 10
     simStart = 0
     simEnd = 500
-    simLen = simStart - simEnd
+    simLen = simEnd - simStart
 
     # parse data into separate loops
     smTraj = a[simStart:simEnd, :, 0:smSize]
     lgTraj = a[simStart:simEnd, :, smSize:]
+
+    plt.scatter(lgTraj[0, 0, :], lgTraj[0, 1, :])
+    plt.show()
+    plt.close()
 
     print(smTraj.shape)
     print(lgTraj.shape)
@@ -127,12 +131,6 @@ if __name__ == "__main__":
         
         mins.append(minimum)
         maxs.append(maximum)
-
-    print("mins:", mins)
-    print("maxs:", maxs)
-
-    mins = [-5, -5, -5]
-    mins = [5, 5, 5]
 
     name = "trial1.gif"
 

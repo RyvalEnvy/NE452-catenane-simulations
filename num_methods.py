@@ -2,15 +2,18 @@ import numpy as np
 import math
 from matplotlib import pyplot as plt
 
-def reload(fname,T = 50, gamma = 1/50, length = 1, dt = 0.1, skipSteps = 1, 
-           f_pdb = "pdb", f_ff = "forcefield", srSize = 20):
-    #fname = "{}fs_{}ps_{}K_{}ss.xyz".format(dt, length, T, skipSteps)
+def reload(T = 1, gamma = 1, length = 1, dt = 0.1, skipSteps = 1, 
+           f_pdb = "pdb", f_ff = "forcefield", srSize = 10, fname = None):
+    
+    if fname == None:
+        fname = "{}fs_{}ps_{}K_{}ss.xyz".format(dt, length, T, skipSteps)
+    
     totSteps = int(length*1000/(skipSteps * dt))
     print("totSteps", totSteps)
 
     a = np.loadtxt(fname)
     nParticles = a.shape[-1]//3
-    a = a.reshape(totSteps, 3, nParticles)
+    a = a.reshape(totSteps+1, 3, nParticles)
     print(a.shape)
 
     return a
@@ -157,6 +160,41 @@ def autocorrelation(plot = True, upTo = None):
 
     return acorr
 
+def plotMaxDims():
+    """ function to plot max position of any bead at each step in the 
+        trajectory"""
+    feature = reload()
+
+    # extract the max position in each dim // shape: 1xN_step
+    xMaxs = np.max(np.abs(feature[:, 0, :]), axis = 1)
+    yMaxs = np.max(np.abs(feature[:, 1, :]), axis = 1)
+    zMaxs = np.max(np.abs(feature[:, 2, :]), axis = 1)
+
+    # plot each max position vector to observe expansion
+    fig, axs = plt.subplots(3)
+    fig.suptitle('Space occupied over time')
+    steps = np.arange(len(xMaxs))
+    
+    axs[0].plot(steps, xMaxs)
+    axs[0].set_title("x-Axis")
+    axs[0].set_xlabel("Step")
+    axs[0].set_ylabel("$q_{MAX}$")
+
+    axs[1].plot(steps, yMaxs)  
+    axs[1].set_title("y-Axis")
+    axs[1].set_xlabel("Step")
+    axs[1].set_ylabel("$q_{MAX}$")
+
+    axs[2].plot(steps, zMaxs) 
+    axs[2].set_title("z-Axis")
+    axs[2].set_xlabel("Step")
+    axs[2].set_ylabel("$q_{MAX}$")
+
+    fig.tight_layout()
+
+    plt.show()
+    plt.close()
+
 if __name__ == "__main__":
     # angs = calculate_angular_displacement()
     # iters = np.arange(angs.shape[0])
@@ -166,4 +204,6 @@ if __name__ == "__main__":
     # plt.show()
     # plt.close()
 
-    autocorrelation(upTo = 500)
+    # autocorrelation(upTo = 500)
+
+    plotMaxDims()

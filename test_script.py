@@ -2,12 +2,11 @@ from openmm import app
 import openmm as mm
 from openmm import unit
 import sys
-import h5py
 import numpy as np
 import os
 
 def runSim(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1, f_pdb = "pdb", 
-           f_ff = "forcefield", srSize = 20):
+           f_ff = "forcefield", srSize = 10):
     """
     Function to run the openMM simulation (NVT) with given params and 
     pdb+forcefields
@@ -40,6 +39,10 @@ def runSim(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1, f_pdb = "
     path = os.getcwd()
     pdbPath = os.path.join(path, "pdb_files/{}.pdb".format(f_pdb))
     forcefieldPath = os.path.join(path, "pdb_files/{}.xml".format(f_ff))
+    
+    # output a little description so i dont forget what i ran 5 min ago
+    reminder ="Now Running: dt = {}fs; length = {}ps; T = {}K; {} steps skipped"
+    print(reminder.format(dt, length, T, skipSteps))
 
     # set up params
     kB = 1.38e-23
@@ -68,7 +71,7 @@ def runSim(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1, f_pdb = "
 
     # create arrays to store xyz coords in
     # format is timestep:xyz:particle#
-    traj = np.zeros((indSteps, 3, numParticles))
+    traj = np.zeros((indSteps+1, 3, numParticles))
 
     for i, C in enumerate(c1):
         topo.addBond(C, c1[i-1])
@@ -84,16 +87,20 @@ def runSim(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1, f_pdb = "
     unmatched_residues = forcefield.getUnmatchedResidues(topo)
     print("unmatched residues\n", unmatched_residues)
     nonbonded = app.NoCutoff
-         
-    system = forcefield.createSystem(topo, nonbondedMethod = nonbonded,
-                                    nonbondedCutoff = 1e3*unit.nanometer,
+
+    cutoff = 2**(1/6)*unit.nanometer
+
+    system = forcefield.createSystem(topo, nonbondedCutoff = cutoff,
                                     constraints = None)
+    system.setDefaultPeriodicBoxVectors((200, 0, 0), 
+                                        (0, 200, 0),
+                                        (0, 0, 200))
 
     integrator = mm.LangevinIntegrator(T*unit.kelvin, gamma, 
                                        dt*unit.femtoseconds)
 
     platform = mm.Platform.getPlatformByName('Reference')
-    simulation = app.Simulation(pdb.topology, system, integrator, platform)
+    simulation = app.Simulation(topo, system, integrator, platform)
     simulation.context.setPositions(pdb.positions)
     simulation.context.computeVirtualSites()
     	
@@ -102,20 +109,24 @@ def runSim(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1, f_pdb = "
     # equilibration step
     # simulation.step(1000)
 
+    # save initial steps
+    current = simulation.context.getState(getPositions = True)
+    positions = np.array(current.getPositions()/unit.nanometer)
+    traj[0, :, :] = positions.transpose()
+
     for step in range(steps):
         simulation.step(skipSteps)
         # extract positions
         current = simulation.context.getState(getPositions = True)
         positions = np.array(current.getPositions()/unit.nanometer)
-        traj[step, :, :] = positions.transpose()
+        traj[step+1, :, :] = positions.transpose()
 
     # save the trajectory as an xyz file
     traj_r = traj.reshape(traj.shape[0], -1)
-    print(traj_r.shape)
     np.savetxt("{}fs_{}ps_{}K_{}ss.xyz".format(dt, length, T, skipSteps), traj_r)
 
 def reload(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1, 
-           f_pdb = "pdb", f_ff = "forcefield", srSize = 20):
+           f_pdb = "pdb", f_ff = "forcefield", srSize = 10):
     fname = "{}fs_{}ps_{}K_{}ss.xyz".format(dt, length, T, skipSteps)
     totSteps = int(length*1000/(skipSteps * dt))
     print("totSteps", totSteps)
@@ -128,7 +139,7 @@ def reload(T = 50, gamma = 1/50, length = 10, dt = 0.1, skipSteps = 1,
     return a
 
 if __name__ == "__main__":
-    runSim(T = 50, gamma = 1/50, length = 0.01, dt = 0.1, skipSteps = 1, 
-           f_pdb = "combo_ring", f_ff = "combo_ff")
+    runSim(T = 1, gamma = 1, length = 1, dt = 0.1, skipSteps = 1, 
+           f_pdb = "scaled_rings", f_ff = "unitary_ff", srSize = 10)
     # reload(T = 50, gamma = 1/50, length = 0.01, dt = 0.1, skipSteps = 1, 
-    #        f_pdb = "combo_ring", f_ff = "combo_ff")
+    #        f_pdb = "combo_ring", f_ff = "combo_ff", srSize = 10)
